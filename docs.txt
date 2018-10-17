@@ -1,0 +1,1 @@
+aws s3 cp deployment.zip s3://cryptogoserverless
