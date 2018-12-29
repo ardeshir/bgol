@@ -1,4 +1,6 @@
 #!/bin/bash
+# usage:
+# ./bgol.sh main.zip 
 
 DEP=""
 
