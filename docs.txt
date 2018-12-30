@@ -1,1 +1,46 @@
-aws s3 cp deployment.zip s3://cryptogoserverless
+# go serverless 
+
+aws s3 cp main.zip s3://cryptogoserverless
+
+SYNOPSIS
+            create-function
+          --function-name <value>
+          --runtime <value>
+          --role <value>
+          --handler <value>
+          [--code <value>]
+          [--description <value>]
+          [--timeout <value>]
+          [--memory-size <value>]
+          [--publish | --no-publish]
+          [--vpc-config <value>]
+          [--dead-letter-config <value>]
+          [--environment <value>]
+          [--kms-key-arn <value>]
+          [--tracing-config <value>]
+          [--tags <value>]
+          [--layers <value>]
+          [--zip-file <value>]
+          [--cli-input-json <value>]
+          [--generate-cli-skeleton <value>]
+
+./bgol administrator$ aws lambda create-function --function-name questionresponse --runtime go1.x --role arn:aws:iam::446537445619:role/GoServerless --handler main --zip-file fileb://main.zip
+{
+    "FunctionName": "questionresponse",
+    "FunctionArn": "arn:aws:lambda:us-east-1:446537445619:function:questionresponse",
+    "Runtime": "go1.x",
+    "Role": "arn:aws:iam::446537445619:role/GoServerless",
+    "Handler": "main",
+    "CodeSize": 3012397,
+    "Description": "",
+    "Timeout": 3,
+    "MemorySize": 128,
+    "LastModified": "2018-12-29T23:46:53.868+0000",
+    "CodeSha256": "SQ+kc2GFjmyRGk6UKTra3/RtRSFQ8AM0urCZrmTjNOo=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "871fc7e3-a695-4b67-811c-09e60d992588"
+}
+
